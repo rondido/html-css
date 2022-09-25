@@ -1,0 +1,75 @@
+/* 오늘의 쇼핑 제안 */
+
+
+header{    
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+}
+
+.title{
+    background-image: url(../../assets/icon/shopping.svg);
+    background-repeat: no-repeat;
+    
+  }
+
+  .super-stars{
+    background-image: url(../../assets/sprites/rating-stars.png);
+    background-repeat: no-repeat;
+    display: block;
+    background-position: -10px -150px;
+    width: 76px;
+  }
+
+ul{
+    
+    display: flex;
+}
+
+li{
+    list-style: none;
+}
+.main{
+    display: flex;
+    margin-left: 145px;
+}
+.upper-list{
+    position: relative;
+    text-align: center;
+    margin-right: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3px 10px;
+    gap: 10px;
+}
+
+.text{
+    position: absolute;
+    width: 53px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    background-color: var(--color-red-500);
+    color:var(--color-white);
+    border-radius: 0px 0px 4px 0px;
+
+    font-size: 16px;
+
+}
+
+.item-title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;;
+}
+.item-stars{    
+    display: block;
+    float: left;
+    width: 76px;
+    height: 15px;
+    background-image: url(./assets/sprites/rating-stars.png);
+    text-indent: -9999px;
+}
