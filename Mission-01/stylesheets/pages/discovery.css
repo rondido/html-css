@@ -50,36 +50,23 @@ header{
     height: 42px;
     background: rgba(0, 0, 0, 0.2);
   }
+
   .box > button:hover{
     width: 112px;
     height: 42px;
   }
+
   .box > button::before{
     content:">";      
   }
   .box > button:hover::before{
     content:"구매하기 >";
-    background-color: var(--color-blue-600);    
+    background-color: var(--color-blue-600);           
   }
-
-  .box:focus-within{
+  .box:hover{
     border:1px solid var(--color-blue-600);
   }
-  .box > button:focus-within::before{
-    width: 112px;
-    height: 42px;
-    content:"구매하기 >";
-    background-color: var(--color-blue-600);        
-  }
 
-  .box > button:focus-within::after{
-    content:">";
-  }
-
-  /* .box :focus-within::before{
-    background-color: var(--color-blue-600);    
-  } */
- 
   .f-left{
     float:left;
   }
