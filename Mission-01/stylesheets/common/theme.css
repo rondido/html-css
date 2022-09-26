@@ -1,5 +1,8 @@
 /* Theme 스타일 작성 */
 
 :root {
-    --color-blue-600 : #0074E9 
+    --color-blue-600 : #0074E9;    
+    --color-white-500 : #F3F3F3;    
+    --color-white-box : #C4C4C4;
+    --color-span : #AAA9A9;
 }

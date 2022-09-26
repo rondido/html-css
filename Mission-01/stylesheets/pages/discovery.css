@@ -1,56 +1,109 @@
 /* CSS 작성 */
 
 
-#main{
-    /* position: relative;
-    width: 980px;
-    padding: 40px 40px 0 0;
-    margin: 0 auto;
-    margin-right: 40px; */
-    width: 1020px;
-    position: relative;
-    margin: 0 auto;
+header{
+    margin-left:321px;
+    margin-top: 100px;
 }
-.sectiondiv{
-    position: relative;
-    width: 1020px;
-    padding: 40px 40px 0 0;
-    margin: 0 auto;
+.w25{
+    width:243px;
+  }
+  .w50{
+    width:502px;
+  }
+  .w100{
+    width:100%;
+  }
+  .mr-8{
+    margin-right:16px;
+  }
+  .mt-8{
+    margin-top:16px;
+  }
+  .mb-8{
+    margin-bottom:8px;
+  }
+  .box{
+    border: 1px solid var(--color-white-box);
+    height:310px;
+    text-align:center;
+    position:relative;
+   
 
-}
+  }
+  .btn{
+    transition: all;
+    border:0;
+    outline: 0;
+    color: var(--color-white-500);
+  }
 
-.bonmun{
-    position: relative;
-    padding: 3px 0 13px 4px;
-    background: #fff;
-    border: 1px solid #d6d6d6;
-    overflow: hidden;
-    width: 1020px;
-}
- ul{    
-    list-style:none;
-    margin: 0;
-    padding: 0;
+  .btn:hover{
+    background-color: var(--color-blue-600);
+  }
 
-}
-.head{
-    background-color: blue;
-}
-li{
+  .box > button{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .box > button:hover{
+    width: 112px;
+    height: 42px;
+  }
+  .box > button::before{
+    content:">";      
+  }
+  .box > button:hover::before{
+    content:"구매하기 >";
+    background-color: var(--color-blue-600);    
+  }
+
+  .box:focus-within{
+    border:1px solid var(--color-blue-600);
+  }
+  .box > button:focus-within::before{
+    width: 112px;
+    height: 42px;
+    content:"구매하기 >";
+    background-color: var(--color-blue-600);        
+  }
+
+  .box > button:focus-within::after{
+    content:">";
+  }
+
+  /* .box :focus-within::before{
+    background-color: var(--color-blue-600);    
+  } */
  
-    float: left;
-    position: relative;
-    margin: 10px 2px 0 10px;
-    background: #fff;
-    /* top: 0px; */
-    display: block;
-    
-    /* margin-top: 16px;
-    margin-left: 16px; */
-    /* position: relative; */
-    border: 2px solid #C4C4C4;
+  .f-left{
+    float:left;
+  }
+
+  .main{
+    width:1022px;
+    height:1010px;
+    margin-left: 321px;
+  }
+
+  .sectiondiv{
+    margin-top:56px;
+  }
+
+  section{
+    margin-left:321px;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+
+.h2-span{
+    font-size: 16px;
+    color:var(--color-span);
+
 }
-
-
-
-
