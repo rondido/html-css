@@ -1,75 +1,140 @@
 /* 오늘의 쇼핑 제안 */
 
-
-header{    
-        /* text-align: center; */
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-}
-
-.title{
-    background-image: url(../../assets/icon/shopping.svg);
-    background-repeat: no-repeat;
-    
-  }
-
-  .super-stars{
-    background-image: url(../../assets/sprites/rating-stars.png);
-    background-repeat: no-repeat;
-    display: block;
-    background-position: -10px -150px;
-    width: 76px;
-  }
-
-ul{
-    
-    display: flex;
-}
-
-li{
-    list-style: none;
-}
 .main{
+    position: relative;
+    width: 1020px;
+    height: 270px;
+    left: 2px;
+    top: 242px;
     display: flex;
-    margin-left: 145px;
+    margin-left: 147px;
 }
+.mr-5{
+    margin-right: 5px;
+}
+
 .upper-list{
     position: relative;
-    text-align: center;
-    margin-right: 45px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 3px 10px;
-    gap: 10px;
+    width: 200px;
+    height: 270px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    
 }
+.fs {
+    font-size: 14px;
+}
+.fc{
+    color: var(--color-gray-700);
+}
+.fw{
+    font-weight: 400;
 
+}
+.ih{
+    line-height: 120%;
+}
+.center{
+    text-align: center;
+}
 .text{
     position: absolute;
     width: 53px;
     height: 30px;
     left: 0px;
     top: 0px;
-    background-color: var(--color-red-500);
-    color:var(--color-white);
     border-radius: 0px 0px 4px 0px;
+    padding: 3px 10px;
+    color:var(--color-white);
+    background-color: var(--color-red-500);
 
-    font-size: 16px;
+}
+.mt{
+    margin-top: 12px;
+}
+.item-stars{
+    width: 68px;
+    height: 17px;
+    left: 0px;
+    top: 29px;
 
 }
 
-.item-title{
-    font-style: normal;
+.review-cnt{
     font-weight: 400;
     font-size: 14px;
-    line-height: 120%;;
+    line-height: 120%;
+    color: var(--color-gray-700);
 }
-.item-stars{    
-    display: block;
-    float: left;
-    width: 76px;
-    height: 15px;
-    background-image: url(./assets/sprites/rating-stars.png);
-    text-indent: -9999px;
+
+.super-stars{
+    position: absolute;
+    width: 68px;
+    height: 14px;
+    left: 0px;
+    top: 51px;    
+    background: url(../../assets/sprites/rating-stars.png);
+    background-repeat: no-repeat;
+    clear: both;
+    
+}
+.stars{
+    position: absolute;
+    width: 68px;
+    height: 14px;
+    left: 0px;
+    top: 31px;
+    background: url(../../assets/sprites/rating-stars.png);
+    background-repeat: no-repeat;
+    clear: both;
+}
+
+.stars-position-45{
+    background-position: 0px -126px;
+}
+
+.stars-position-4{
+    background-position: 0px -112px;
+}
+.stars-position-5{
+    background-position: 0px -139px;
+
+}
+
+h2{
+    background: url(../../assets/icon/shopping.svg);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    margin-left: 145px;
+    position:absolute;
+    top:188px;
+}
+.rocket{
+    width: 55px;
+    height: 16px;
+    margin-top: 12px;    
+}
+
+.item-detail{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    width: 172px;
+    height: 66px;
+    left: 14px;
+    top: 186px;
+}
+header{
+    position: absolute;
+    width: 176px;
+    height: 40px;
+    left: 147px;
+    top: 100px;
+}
+
+.flex{
+    display: flex;
+    align-items: baseline;
 }
