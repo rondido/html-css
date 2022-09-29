@@ -1,4 +1,321 @@
 /* 카테고리별 추천 광고상품 */
-h2{
-    color: blue;
+.next{
+ 
+    font-size: 14px;
+
+    font-weight: 700px;
+    line-height: 120%;
+    position: absolute;
+    width: 62px;
+    height: 17px;
+    left: 24px;
+    top: 84px;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.33638 5L0 0.917474L0.974524 0L5.79817 4.54126C6.06728 4.79462 6.06728 5.20538 5.79817 5.45874L0.974524 10L0 9.08253L4.33638 5Z' fill='%23929292'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 54px 4px;
+    color: var(--color-gray-700);
+}   
+
+
+
+.main{
+    position: absolute;
+    width: 1022px;
+    height: 634px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid blue;
+    
 }
+ 
+
+.hot-keyword{
+    /* position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 124px;
+    padding: 22px 10px;
+    border-bottom: 1px solid #ddd; */
+    position: absolute;
+    width: 124px;
+    height: 220px;
+    left: 24px;
+    top: 382px;
+
+}
+p{
+    position: absolute;
+    width: 89px;
+    height: 28px;
+    left: 24px;
+    top: 48px;
+    color: #9D7A6D;
+
+}
+.keyword{
+    position: relative;
+    margin: 40px auto 0 auto;
+    width: 1068px;
+    padding-left: 48px;
+}
+
+
+
+
+.hot-keyword >a{
+    float: left;
+    clear: left;
+    display: block;
+    margin-top: 6px;
+
+    padding: 6px 10px;
+    border: 1px solid #CCCCCC;
+    color: #9D7A6D;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+}
+
+li{
+    list-style: none;
+}
+
+.title{    
+    position: absolute;
+    z-index: 2;
+    width: 114px;
+    padding: 40px 0 0 22px;
+}
+
+.best-item{
+    position: relative;
+    float: right;
+    width: 548px;
+    height: 600px;
+    overflow: hidden;
+
+
+}
+
+.list-item{
+    display: flex;
+    margin-right: 16px;
+
+}
+
+ul{
+    display: flex;
+    width: 568px;
+    flex-wrap: wrap;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    
+}
+
+ul > li{
+    width: 160px;
+    height: 300px;
+    left: 862px;
+    top: 9px;
+}
+
+span{
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%; 
+}
+
+img{
+    vertical-align: top;
+}
+
+.name{
+    /* max-height: 28px;
+    overflow: hidden;
+    line-height: 120%;
+    margin: 6px 0 1px;
+    font-size: 14px; */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    width: 152px;
+    height: 51px;
+    display: block;
+}
+.price >strong{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.price{
+    margin-top: 3px;
+    line-height: 16px;
+    display: block;
+    font-size: 14px;
+
+    
+}
+.product-img{
+    width: 160px;
+    height: 300px;    
+   margin-top: 9px;
+    /* padding: 22px 7px 0 15px */
+}
+
+.product-img > img{
+    text-align: center;
+    width: 160px;
+    height: 160px;
+}
+
+
+.name-detail{
+    color: var(--color-red-500);
+}
+h2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    width: 260px;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+}
+
+/* .h2-span{
+    width: 139px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 115%;
+} */
+
+.section-detail{
+    width: 94px;
+    height: 18px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 115%;
+}
+
+
+.line {
+    border-bottom: 1px solid var(--color-gray-600);
+}
+
+.cur-warpper{
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* margin: 0 auto;
+    overflow: hidden;     
+    float: left;
+    width: 320px;
+    height: 600px;
+    margin-left: 174px; */
+    position: absolute;
+    width: 320px;
+    height: 631px;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    margin-left: 174px;
+  
+}
+
+
+
+.cur{    
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: 320px;
+    height: 631px;
+    left: 174px;
+    top: 1px;
+}
+
+
+.cur-warpper > div{
+    position: absolute;
+    left: 0;
+    transition: 0.3s ease;
+    opacity: 1;
+
+}
+
+.cur-warpper>div.on{
+    opacity: 1;
+  }
+
+  .control{    
+    bottom: 30px;
+    text-align: center;         
+    width: 20px;
+    height: 20px;
+    background: blue;                       
+    line-height: 26px;
+    font-size: 0.8em;
+    border-radius: 14px;
+    margin: 0 2px
+        
+  }
+
+  .control >a {
+    /* position: absolute;
+    width: 20px;
+    height: 20px;
+    background: blue;                       
+    line-height: 26px;
+    font-size: 0.8em;
+    border-radius: 14px;
+    margin: 0 2px */
+    width: 20px;
+    height: 20px;
+    background: #f6f5f5;                       
+    line-height: 26px;
+    font-size: 0.8em;
+    border-radius: 14px;
+    margin: 0 2px;
+  }
+
+
+
+  .caption{
+    position: absolute;
+    width: 260px;
+    height: 90px;
+    left: 30px;
+    top: 483px;
+    background-color: var(--color-brown-300);
+  }
+
+
+  .caption-1{
+    position: absolute;
+    width: 205px;
+    height: 24px;
+    left: 28px;
+    top: 19px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: var(--color-white);
+  }
+  .caption-2{
+    position: absolute;
+    width: 215px;
+    height: 19px;
+    left: 23px;
+    top: 51px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-white);
+  }
