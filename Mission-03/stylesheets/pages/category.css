@@ -1,8 +1,12 @@
 /* 카테고리별 추천 광고상품 */
+html{
+    position: relative;
+    width: 1280px;
+    height: 2000px;
+}
 .next{
  
     font-size: 14px;
-
     font-weight: 700px;
     line-height: 120%;
     position: absolute;
@@ -16,7 +20,18 @@
     color: var(--color-gray-700);
 }   
 
+h1{
+    position: absolute;
+    width: 246px;
+    height: 56px;
+    left: 240px;
+    top: 100px;
 
+}
+
+h2{
+ 
+}
 
 .main{
     position: absolute;
@@ -24,19 +39,15 @@
     height: 634px;
     left: 0px;
     top: 0px;
-    border: 1px solid blue;
-    
+    border-top: 1.5px solid var(--color-brown-300);
+    border-bottom: 1.5px solid var(--color-brown-300);
+    margin-left: 139px;
+    margin-top: 266px;
 }
  
 
 .hot-keyword{
-    /* position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-    width: 124px;
-    padding: 22px 10px;
-    border-bottom: 1px solid #ddd; */
+
     position: absolute;
     width: 124px;
     height: 220px;
@@ -44,14 +55,23 @@
     top: 382px;
 
 }
-p{
+
+
+.house_p{
     position: absolute;
     width: 89px;
     height: 28px;
     left: 24px;
     top: 48px;
-    color: #9D7A6D;
-
+    color: var(--color-brown-300);
+}
+.kitchen_p{
+    position: absolute;
+    width: 89px;
+    height: 28px;
+    left: 24px;
+    top: 48px;
+    color: var(--color-green-700);
 }
 .keyword{
     position: relative;
@@ -60,9 +80,27 @@ p{
     padding-left: 48px;
 }
 
+.hot-keyword_kichen > a{
+    float: left;
+    clear: left;
+    display: block;
+    margin-top: 6px;
 
+    padding: 6px 10px;
+    border: 1px solid var(--color-gray-500);
+    color: var(--color-green-700);;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+}
 
-
+.hot-keyword_kichen{
+    position: absolute;
+    width: 124px;
+    height: 220px;
+    left: 24px;
+    top: 382px;
+}
 .hot-keyword >a{
     float: left;
     clear: left;
@@ -70,8 +108,8 @@ p{
     margin-top: 6px;
 
     padding: 6px 10px;
-    border: 1px solid #CCCCCC;
-    color: #9D7A6D;
+    border: 1px solid  var(--color-gray-500);
+    color: var(--color-brown-300);
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;
@@ -103,6 +141,16 @@ li{
     margin-right: 16px;
 
 }
+.list-item::before{
+    content: "";
+    position: absolute;
+    left: 4.1%;
+    right: 0%;
+    top: 49.93%;
+    bottom: 50%;
+    border-bottom: 1px solid var(--color-gray-600);
+}
+
 
 ul{
     display: flex;
@@ -132,11 +180,7 @@ img{
 }
 
 .name{
-    /* max-height: 28px;
-    overflow: hidden;
-    line-height: 120%;
-    margin: 6px 0 1px;
-    font-size: 14px; */
+
     font-weight: 400;
     font-size: 14px;
     line-height: 120%;
@@ -161,8 +205,7 @@ img{
 .product-img{
     width: 160px;
     height: 300px;    
-   margin-top: 9px;
-    /* padding: 22px 7px 0 15px */
+    margin-top: 9px;
 }
 
 .product-img > img{
@@ -182,22 +225,21 @@ h2{
     padding: 0px;
     width: 260px;
     height: 46px;
-    left: 0px;
-    top: 0px;
+    
+    position: absolute;
+    top: 217px;
+    left: 240px;
 }
 
-/* .h2-span{
-    width: 139px;
-    height: 28px;
+section{
     display: flex;
-    align-items: center;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 115%;
-} */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+}
 
 .section-detail{
-    width: 94px;
+    width: 96px;
     height: 18px;
     font-weight: 500;
     font-size: 16px;
@@ -210,14 +252,7 @@ h2{
 }
 
 .cur-warpper{
-    /* overflow: hidden; */
-    /* position: relative; */
-    /* margin: 0 auto;
-    overflow: hidden;     
-    float: left;
-    width: 320px;
-    height: 600px;
-    margin-left: 174px; */
+
     position: absolute;
     width: 320px;
     height: 631px;
@@ -237,7 +272,6 @@ h2{
     width: 320px;
     height: 631px;
     left: 174px;
-    top: 1px;
 }
 
 
@@ -254,37 +288,47 @@ h2{
   }
 
   .control{    
-    bottom: 30px;
     text-align: center;         
-    width: 20px;
-    height: 20px;
-    background: blue;                       
-    line-height: 26px;
-    font-size: 0.8em;
-    border-radius: 14px;
-    margin: 0 2px
-        
-  }
-
-  .control >a {
-    /* position: absolute;
-    width: 20px;
-    height: 20px;
-    background: blue;                       
-    line-height: 26px;
-    font-size: 0.8em;
-    border-radius: 14px;
-    margin: 0 2px */
-    width: 20px;
-    height: 20px;
-    background: #f6f5f5;                       
+    width: 32px;
+    height: 12px;
+    top: 597px;
+    left: 144px;
     line-height: 26px;
     font-size: 0.8em;
     border-radius: 14px;
     margin: 0 2px;
+    position: absolute;
   }
 
+.on {
+    text-align: center;         
+    width: 12px;
+    height: 12px;
+    line-height: 26px;
+    font-size: 0.8em;
+    border-radius: 14px;
+    margin: 0 2px;
+    position: absolute;    
+    left: 164px;
+    background: var(--color-gray-600);
 
+
+  }
+
+.on1{
+
+    text-align: center;
+    width: 12px;
+    height: 12px;
+    line-height: 26px;
+    font-size: 0.8em;
+    border-radius: 14px;
+    margin: 0 8px;
+    position: absolute;
+    left: 144px;
+    background: var(--color-gray-700);
+    
+}
 
   .caption{
     position: absolute;
@@ -318,4 +362,45 @@ h2{
     line-height: 120%;
     text-align: center;
     color: var(--color-white);
+  }
+
+  .main_2{  
+    position: absolute;
+    width: 1022px;
+    height: 634px;
+    left: 0px;
+    top: 728px;
+    border-top: 1.5px solid var(--color-brown-300);
+    border-bottom: 1.5px solid var(--color-brown-300);
+    margin-left: 139px;
+    margin-top: 290px;
+
+  }
+  .h2{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 260px;
+height: 28px;
+  }
+
+  .h2-cotegory{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 115%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .h2-thing{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 115%;
+    display: flex;
+    align-items: center;
+    color: var(--color-blue-600);
   }
