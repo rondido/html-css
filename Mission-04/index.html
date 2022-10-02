@@ -15,24 +15,95 @@
 </head>
 
 <body>
-  <div>
+  <!-- 전체 -->
+  <div class="main-header">
    <header>
     <div>
         <div>
-          <a href="/">
+          <a href="/" rel=”noopener noreferrer”>
           <h1>Coupang</h1>
           </a>
         </div>
     </div>
-    <div class="search-box">
-
+    <div class="search-form">
+      <!-- 검색 -->
+      <form>
+        <div>
+          <div>
+            <!-- 분류 -->
+            <select>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+          <!-- 검색창 -->
+          <div>
+            <input type="search">
+          </div>
+          <!-- 마이크 -->
+          <button class="mike"></button>
+        </div>  
+        <!-- 검색 버튼 -->
+        <button class="search"></button>
+      </form>      
+    </div>
+    <!-- 마이쿠팡 -->
+    <div class="myCoupang">
+      <button>
+        <span>마이쿠팡</span>        
+      </button>
+      <!-- 마이쿠팡 목록 -->
+      <ul>
+        <a href="#">
+        <li>주문목록</li>
+        </a>
+        <a href="#">
+        <li>취소/반품</li>
+        </a>
+        <a href="#">
+        <li>찜리스트</li>    
+        </a>    
+      </ul>
+    </div>
+    <!-- 장바구니 -->
+    <div class="cart">
+      <button>
+       <span>장바구니</span>
+       <em>0</em>
+      </button>
+      <!-- 장바구니 메시지 -->
+      <div>
+        <span>
+          <ul>
+            <li>장바구니에 담긴 상품이 없습니다.</li>
+          </ul>
+        </span>
+      </div>
     </div>
     <ul class="sub-menu">
-
+      <li>
+        로켓배송
+      </li>
+      <li>로켓프레시</li>
+      <li>biz쿠팡비즈</li>
+      <li>로켓직구</li>
+      <li>골드박스</li>      
+      <li>와우회원할인</li>
+      <li>이벤트/쿠폰</li>
+      <li>착한상점</li>
+      <li>기획전</li>
+      <li>여행/티켓</li>
     </ul>
+    <!-- 버튼 -->
     <div class="category-btn">      
+      <button class="button--category">
+        <a href="#">카테고리</a>
+        <div class="category-detail">
+      </button>      
     </div>
   </header>
+  <!-- 로그인 바 영역 -->
     <div>
       <ul>
         <li>로그인</li>
@@ -43,7 +114,7 @@
       </ul>
     </div>
   </div>
-
 </body>
 
 </html>
+
