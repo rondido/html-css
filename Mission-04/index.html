@@ -16,51 +16,65 @@
 
 <body>
   <!-- 전체 -->
+  <div class="main">
   <div class="main-header">
    <header id="header">
-    <div>
-        <div >          
+    <div class="header-tree">
+        <div class="clearfix">          
           <h1 class="logo">
           <a href="/" rel=”noopener noreferrer”>          
           <p class="coupang">Coupang</p>
           </a>
           </h1>
         </div>
-    </div>
-    <div class="search-form">
+    <div class="search-form product-form clearfix">      
       <!-- 검색 -->
-      <form>
+      <form id="headerform">
+      <fieldset>
         <div class="select-header-form">
-          <div class="select-category">
-            전체
-            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 0H0L4.69565 6L9 0Z" fill="#767676"/>
-              </svg>            
+          <div class="select-category">    
+              <a class="select-current">전체</a>
+              <div class="dropdown-img">
+              <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg">
+                <path d="M9 0H0L4.69565 6L9 0Z" fill="#767676" />
+                </svg>    
+              </div>    
           </div>
             <!-- 분류 -->
             <select id="select-option">
-              <option></option>
-              <option></option>
-              <option></option>
+              <option>전체</option>
+              <option>여성패션</option>
+              <option>남성패션</option>
             </select>
           <!-- 검색창 -->
           <div>
-            <input type="search">
+            <input type="search" placeholder="찾고 싶은 상품을 검색해보세요!" class="input">
           </div>
           <!-- 마이크 -->
-          <button class="mike"></button>
+          <button class="mike" aria-label="음성 검색">
+            <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.6 4.35417C1.6 1.94943 3.56995 0 6 0C8.43005 0 10.4 1.94943 10.4 4.35417V11.4792C10.4 13.8839 8.43005 15.8333 6 15.8333C3.56995 15.8333 1.6 13.8839 1.6 11.4792V4.35417ZM9.2 7.91667V4.35417C9.2 2.60527 7.76731 1.1875 6 1.1875C4.23269 1.1875 2.8 2.60526 2.8 4.35417V7.91667H9.2Z" fill="#767676"/>
+              <path d="M6.4 17.6196C9.52721 17.4159 12 14.8413 12 11.6951V7.125H10.8V11.6951C10.8 14.3184 8.65097 16.4451 6 16.4451C3.34903 16.4451 1.2 14.3184 1.2 11.6951V7.125H0V11.6951C0 14.8413 2.47279 17.4159 5.6 17.6196V18.2083H2.4V19H9.6V18.2083H6.4V17.6196Z" fill="#767676"/>
+              </svg>
+              
+          </button>
         </div>  
         <!-- 검색 버튼 -->
-        <button class="search"></button>
+        <button class="search"  aria-label="키워드 검색">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0723 13.5333C10.8108 14.4812 9.24128 15.043 7.54025 15.043C3.37589 15.043 0 11.6755 0 7.52151C0 3.36749 3.37589 0 7.54025 0C11.7046 0 15.0805 3.36749 15.0805 7.52151C15.0805 9.40681 14.3851 11.1301 13.2363 12.4501L18 16.8365L16.9233 18L12.0723 13.5333ZM13.4931 7.52151C13.4931 10.801 10.8279 13.4595 7.54025 13.4595C4.2526 13.4595 1.58742 10.801 1.58742 7.52151C1.58742 4.24202 4.2526 1.58348 7.54025 1.58348C10.8279 1.58348 13.4931 4.24202 13.4931 7.52151Z" fill="#0074E9"/>
+            </svg>                 
+        </button>
+      </fieldset>
       </form>      
     </div>
     <!-- 마이쿠팡 -->
     <div class="myCoupang">
-      <button>
-        <span>마이쿠팡</span>        
+      <button class="mycoupang-img">
+        <span class="myCoupang-text">마이쿠팡 </span>
       </button>
       <!-- 마이쿠팡 목록 -->
-      <ul>
+      <!-- <ul>
         <a href="#">
         <li>주문목록</li>
         </a>
@@ -69,7 +83,7 @@
         </a>
         <a href="#">
         <li>찜리스트</li>    
-        </a>    
+        </a>     -->
       </ul>
     </div>
     <!-- 장바구니 -->
@@ -101,6 +115,8 @@
       <li>기획전</li>
       <li>여행/티켓</li>
     </ul>
+  </div>
+
     <!-- 버튼 -->
     <div class="category-btn">      
       <button class="button--category">
@@ -119,6 +135,7 @@
         <li>제휴마케팅</li>
       </ul>
     </div>
+  </div>
   </div>
 </body>
 
