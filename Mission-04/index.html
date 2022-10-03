@@ -10,33 +10,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/stylesheets/main.css" />
+  <link rel="stylesheet" href="../Mission-04/stylesheets/main.css" />
   <script src="/js/main.js" defer></script>
 </head>
 
 <body>
   <!-- 전체 -->
   <div class="main-header">
-   <header>
+   <header id="header">
     <div>
-        <div>
-          <a href="/" rel=”noopener noreferrer”>
-          <h1>Coupang</h1>
+        <div >          
+          <h1 class="logo">
+          <a href="/" rel=”noopener noreferrer”>          
+          <p class="coupang">Coupang</p>
           </a>
+          </h1>
         </div>
     </div>
     <div class="search-form">
       <!-- 검색 -->
       <form>
-        <div>
-          <div>
+        <div class="select-header-form">
+          <div class="select-category">
+            전체
+            <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 0H0L4.69565 6L9 0Z" fill="#767676"/>
+              </svg>            
+          </div>
             <!-- 분류 -->
-            <select>
+            <select id="select-option">
               <option></option>
               <option></option>
               <option></option>
             </select>
-          </div>
           <!-- 검색창 -->
           <div>
             <input type="search">
