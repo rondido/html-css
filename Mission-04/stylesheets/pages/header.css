@@ -2,13 +2,22 @@
 
 .button--category{
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 6H0V0H30V6Z' fill='white'/%3E%3Cpath d='M30 18H0V12H30V18Z' fill='white'/%3E%3Cpath d='M0 30H30V24H0V30Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-color: var(--color-blue-600);
+    width: 110px;
+    height: 116px;
+    top: 0;
+    left: 0;
+    margin-right: 30px;
+    background-position: 0 0;
+    text-align: center;
 }
 
 .main-header{
     position: relative;
+    display: grid;
     width: 1920px;
-    height: 150px;
-    
+    height: 150px;    
     background-color: blue;
 }
 
@@ -17,11 +26,10 @@ ul{
 }
 
 .main-header #header{
-    position: relative;
-    width: 980px;
+    width: 1,020px;
     height: 115px;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 29px;
     background: #fff;
     background-color: red;
 }   
@@ -31,16 +39,16 @@ ul{
     background-repeat: no-repeat;
 }
 .main-header .header-tree .clearfix h1{
- 
-    width: 174px;
-    height: 41px;
+    width: 176px;
+    height: 40px;
     margin: 2px 20px 0 0;
-    float: left;
+    float: left;    
+    left: 604px;
+    top: 68px;
     
 }
 
 .search-form{
-    position: absolute;
     width: 516px;
     height: 40px;
     background: yellow;
@@ -52,7 +60,6 @@ form{
 }
 
 .select-header-form{
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -67,7 +74,6 @@ form{
 }
 .select-category{
     z-index: 20;
-    position: absolute;
     top: 0;
     left: 0;
     background-color: #fff;
@@ -85,7 +91,7 @@ form{
 }
 
 .coupang{
-    position: absolute;
+    display: grid;
     width: 1px;
     height: 1px;
     margin: -1px;
@@ -95,8 +101,8 @@ form{
 }
 
 .header-tree{
-    position: absolute;
-    width: 840px;
+    display: grid;
+    width: 880px;
     height: 91px;
     margin: 25px 0 0 140px;
 }
@@ -121,8 +127,12 @@ form{
 }
 
 .clearfix{
-    position: relative;
-    z-index: 3;
+    z-index: 3;    
+}
+
+.headerinner{
+    width: 870px;
+    height: 58px;
 }
 
 div{
@@ -131,14 +141,13 @@ div{
 }
 
 
-.main{
+/* .main{
     position: relative;
     min-width: 980px;
     overflow: hidden;
-}
+} */
 
 .svg{
-    position: absolute;
     width: 9px;
     height: 6px;
     left: calc(50% - 9px/2 - 0.5px);
@@ -148,7 +157,6 @@ div{
 .select-current{
 
     background-color: var(--color-white);
-    position: absolute;
     width: 23px;
     height: 14px;
     left: 12px;
@@ -159,13 +167,11 @@ div{
     height: 40px;
     width: 301px;
     left: 135px;
-    position: absolute;
     top: 0px;
     right: 80px;
 }
 
 .search{
-    position: absolute;
     width: 40px;
     height: 40px;
     left: 476px;
@@ -176,7 +182,6 @@ div{
 
 .mike{
 
-    position: absolute;
     width: 40px;
     height: 40px;
     left: 436px;
@@ -200,7 +205,6 @@ input{
 }
 
 .dropdown-img{
-    position: absolute;
     width: 40px;
     height: 40px;
     left: 94px;
@@ -211,7 +215,6 @@ input{
     background-image: url("data:image/svg+xml,%3Csvg width='29' height='27' viewBox='0 0 29 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.852 7C19.852 9.94856 17.4617 12.3388 14.5132 12.3388C11.5646 12.3388 9.17432 9.94856 9.17432 7C9.17432 4.05144 11.5646 1.66117 14.5132 1.66117C17.4617 1.66117 19.852 4.05144 19.852 7ZM17.3215 13.4139C19.7893 12.3318 21.5132 9.86723 21.5132 7C21.5132 3.13401 18.3792 0 14.5132 0C10.6472 0 7.51316 3.13401 7.51316 7C7.51316 9.91617 9.29638 12.4159 11.8319 13.4681C8.68168 14.1464 6.28562 15.9034 4.53967 17.9623C2.31329 20.5878 1.12127 23.7238 0.698695 25.8366L0.5 26.8301H28.4936L28.3324 25.863C27.98 23.7484 26.8912 20.6068 24.7471 17.9749C23.0164 15.8505 20.5868 14.0494 17.3215 13.4139ZM26.4916 25.1689H2.56949C3.08398 23.3553 4.12097 21.0245 5.80663 19.0367C7.80281 16.6827 10.6852 14.8301 14.7131 14.8301C18.7382 14.8301 21.5493 16.6797 23.4592 19.0241C25.0817 21.0158 26.0408 23.3542 26.4916 25.1689Z' fill='%23272727'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     text-align: center;
-    position: absolute;
     width: 40px;
     height: 40px;
     left: calc(50% - 40px/2 - 0.97px);
@@ -221,30 +224,53 @@ input{
 
 
 .myCoupang{
-    position: absolute;
     width: 90.94px;
     height: 58px;
     left: 750px;
     background-color: #fff;
+    float:left;
 }
 
 .myCoupang-text{
     font-weight: 400;
-font-size: 12px;
-line-height: 120%;
-position: absolute;
-width: 45px;
-height: 14px;
-left: calc(50% - 45px/2 - 0.97px);
-top: 40px;
+    font-size: 12px;
+    line-height: 120%;
+    
+    width: 45px;
+    height: 14px;
+    left: calc(50% - 45px/2 - 0.97px);
+    top: 40px;
 }
 
 .cart{
-    position: absolute;
+    display: grid;
     width: 45.47px;
     height: 58px;
     left: 1428.53px;
     top: 63px;
     background-color: rosybrown;
     
+}
+
+.category-btn{
+    width: 110px;
+    height: 116px;
+    top: 34px;
+}
+.top-bar{
+    position: absolute;
+    height: 34px;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #f0f0f0;
+    z-index: 3;
+}   
+
+.top-bar-ul{
+    display: flex;
+}
+
+.top-bar .top-bar-ul .item:nth-child(1){
+    background-color: blue;
 }
