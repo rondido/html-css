@@ -99,7 +99,6 @@ form{
     margin: -1px;
     overflow: hidden;
     clip-path: polygon(0 0, 0 0, 0 0);
-    background-color: red;
 }
 
 .header-tree{

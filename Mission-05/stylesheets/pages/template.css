@@ -1,8 +1,36 @@
 /* ---------------------------------------------- */
 /* 헤더                                            */
 /* ---------------------------------------------- */
+.button--category{
+  width: 110px;
+  height: 116px;
+  top: 0;
+  left: 0;
+
+  position: absolute; 
+  background-color: var(--color-blue-600);
+}
+li{
+  list-style: none;
+}
+
+.category-btn{
+  width: 110px;
+  height: 116px;
+  
+  position: absolute;
+}
 
 
+.btn-span{
+  position: absolute;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  color: var( --color-white);
+  
+}
 /* ---------------------------------------------- */
 /* 내비게이션                                        */
 /* ---------------------------------------------- */
