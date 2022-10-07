@@ -1,5 +1,4 @@
 /* 헤더 */
-
 .button--category{
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 6H0V0H30V6Z' fill='white'/%3E%3Cpath d='M30 18H0V12H30V18Z' fill='white'/%3E%3Cpath d='M0 30H30V24H0V30Z' fill='white'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
@@ -9,16 +8,16 @@
     top: 0;
     left: 0;
     margin-right: 30px;
-    background-position: 0 0;
-    text-align: center;
-}
+    background-position: 40px 28px;
+    margin-bottom: 12px;
+    position: absolute; 
+} 
 
 .main-header{
     position: relative;
     display: grid;
     width: 1920px;
     height: 150px;    
-    background-color: blue;
 }
 
 ul{
@@ -29,9 +28,8 @@ ul{
     width: 1,020px;
     height: 115px;
     margin: 0 auto;
-    padding-top: 29px;
+    padding-top: 34px;
     background: #fff;
-    background-color: red;
 }   
 
 .logo{
@@ -54,6 +52,10 @@ ul{
     height: 40px;
     left: 810px;
     top: 68px;
+    display: grid;
+    grid-template-columns: 135px 301px 40px 40px;
+    grid-template-areas:
+    "header search-input mike search";
     
 }
 
@@ -66,18 +68,19 @@ form{
     left: 0;
     right: 0;
     bottom: 0;
+    grid-area: header;
 }
 
 .main-header .select-category{
     width: 135px;
-    height: 40px;
+    height: 37px;
     left: 0px;
     top: 0px;
 }
 .select-category{
     
     background-color: #fff;
-    border: 1px solid #aaa;
+    border-right: 1px solid #aaa;
     font-size: 12px;
     font-weight: normal;
 
@@ -104,9 +107,7 @@ form{
     width: 880px;
     height: 91px;
     margin: 25px 0 0 140px;
-    /* grid-template-columns: 206px 538px 90.94px 45.47px;
-    grid-template-areas:
-    "logo select-header-form myCoupang cart"; */
+  
 }
 
 .header-tree h1 a{
@@ -148,6 +149,14 @@ div{
     padding: 0;
 }
 
+.search-div{
+    grid-area: search-input;
+    height: 37px;
+    left: 135px;
+    right: 80px;
+    top: 0px;
+  
+}
 
 
 
@@ -159,7 +168,7 @@ div{
 }
 
 .select-current{
-    
+    position: relative;
     width: 23px;
     height: 14px;
     left: 12px;
@@ -171,26 +180,31 @@ div{
 }
 
 .input{
-    height: 40px;
+    height: 37px;
     width: 301px;
     left: 135px;
     top: 0px;
     right: 80px;
+    font-size: 12px;
+    line-height: 120%;
+    color:var(--color-gray-600);
 }
 
 .search{
-    width: 40px;
-    height: 40px;
-    left: 476px;
-    top: 0px;  
+    width: 37px;
+    height: 37px;
+    left: 10px;
+    top: 13px;
     background-color: var(--color-white);
+    grid-area: search;
+   
     
 }
 
 .mike{
-
+    grid-area: mike;
     width: 40px;
-    height: 40px;
+    height: 37px;
     left: 436px;
     top: 0px;
     background-color: var(--color-white);
@@ -212,51 +226,73 @@ input{
 }
 
 .dropdown-img{
+    position: relative;
     width: 40px;
     height: 40px;
     left: 94px;
     top: 0px;
+    text-align: center;
 }
 
 .mycoupang-img{
     background-image: url("data:image/svg+xml,%3Csvg width='29' height='27' viewBox='0 0 29 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.852 7C19.852 9.94856 17.4617 12.3388 14.5132 12.3388C11.5646 12.3388 9.17432 9.94856 9.17432 7C9.17432 4.05144 11.5646 1.66117 14.5132 1.66117C17.4617 1.66117 19.852 4.05144 19.852 7ZM17.3215 13.4139C19.7893 12.3318 21.5132 9.86723 21.5132 7C21.5132 3.13401 18.3792 0 14.5132 0C10.6472 0 7.51316 3.13401 7.51316 7C7.51316 9.91617 9.29638 12.4159 11.8319 13.4681C8.68168 14.1464 6.28562 15.9034 4.53967 17.9623C2.31329 20.5878 1.12127 23.7238 0.698695 25.8366L0.5 26.8301H28.4936L28.3324 25.863C27.98 23.7484 26.8912 20.6068 24.7471 17.9749C23.0164 15.8505 20.5868 14.0494 17.3215 13.4139ZM26.4916 25.1689H2.56949C3.08398 23.3553 4.12097 21.0245 5.80663 19.0367C7.80281 16.6827 10.6852 14.8301 14.7131 14.8301C18.7382 14.8301 21.5493 16.6797 23.4592 19.0241C25.0817 21.0158 26.0408 23.3542 26.4916 25.1689Z' fill='%23272727'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    left: calc(50% - 40px/2 - 0.97px);
-    top: 0px;   
+    background-repeat: no-repeat;    
+    width: 60px;
+    height: 40px;  
+    grid-area: myCoupang;     
+    display: grid; 
+    background-position: right;
 }
 
 
 
 .myCoupang{
-    width: 90.94px;
     height: 58px;
-    left: 750px;
-    background-color: #fff;
-    grid-area: myCoupang;
+    left: 1348px;
+
+    position: absolute;
+    width: 90.94px;
+    background-repeat: no-repeat;
 }
 
+
 .myCoupang-text{
+ 
     font-weight: 400;
     font-size: 12px;
     line-height: 120%;
-    
+    position: absolute;
     width: 45px;
     height: 14px;
-    left: calc(50% - 45px/2 - 0.97px);
+    left: calc(50% - 45px/2 - 0.23px);
     top: 40px;
 }
 
 .cart{
-    display: grid;
     width: 45.47px;
     height: 58px;
     left: 1428.53px;
-    top: 63px;
-    background-color: rosybrown;
+    position: absolute;
+}
+.cart-div{
+    background-image: url("data:image/svg+xml,%3Csvg width='41' height='40' viewBox='0 0 41 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.51274 7.64706H6.03168V6H10.8935L11.9239 11.3399L33.9803 10.9253V20.2699C34.0807 20.6219 34.0597 21.0928 33.6809 21.4905C33.2741 21.9177 32.6266 22.0588 31.8946 22.0588H13.9923L14.3484 23.9042C14.4595 24.2048 14.7191 24.6731 15.1367 25.0645C15.5626 25.4636 16.1301 25.7647 16.8774 25.7647H33.146V27.4118H16.8774C15.6225 27.4118 14.6605 26.8893 13.9879 26.259C13.3294 25.642 12.9266 24.9045 12.7488 24.3781L12.7312 24.3258L9.51274 7.64706ZM13.6745 20.4118H31.8946C32.0782 20.4118 32.2141 20.3992 32.3117 20.383V12.6041L12.2406 12.9813L13.6745 20.4118Z' fill='%23272727'/%3E%3Cpath d='M18.546 31.5294C18.546 32.8939 17.4254 34 16.0431 34C14.6608 34 13.5403 32.8939 13.5403 31.5294C13.5403 30.1649 14.6608 29.0588 16.0431 29.0588C17.4254 29.0588 18.546 30.1649 18.546 31.5294Z' fill='%23272727'/%3E%3Cpath d='M30.226 34C31.6083 34 32.7289 32.8939 32.7289 31.5294C32.7289 30.1649 31.6083 29.0588 30.226 29.0588C28.8437 29.0588 27.7232 30.1649 27.7232 31.5294C27.7232 32.8939 28.8437 34 30.226 34Z' fill='%23272727'/%3E%3Ccircle cx='31.0317' cy='10' r='9' fill='%230074E9'/%3E%3Cpath d='M33.8741 10.704C33.8741 11.4 33.8221 12.02 33.7181 12.564C33.6141 13.108 33.4461 13.572 33.2141 13.956C32.9901 14.332 32.6941 14.62 32.3261 14.82C31.9661 15.02 31.5301 15.12 31.0181 15.12C30.3781 15.12 29.8461 14.944 29.4221 14.592C29.0061 14.24 28.6941 13.736 28.4861 13.08C28.2861 12.416 28.1861 11.624 28.1861 10.704C28.1861 9.776 28.2781 8.984 28.4621 8.328C28.6541 7.672 28.9581 7.172 29.3741 6.828C29.7901 6.476 30.3381 6.3 31.0181 6.3C31.6581 6.3 32.1901 6.476 32.6141 6.828C33.0381 7.172 33.3541 7.672 33.5621 8.328C33.7701 8.984 33.8741 9.776 33.8741 10.704ZM29.2421 10.704C29.2421 11.488 29.2981 12.14 29.4101 12.66C29.5301 13.18 29.7181 13.572 29.9741 13.836C30.2381 14.092 30.5861 14.22 31.0181 14.22C31.4501 14.22 31.7941 14.092 32.0501 13.836C32.3141 13.58 32.5061 13.192 32.6261 12.672C32.7461 12.144 32.8061 11.488 32.8061 10.704C32.8061 9.92 32.7461 9.272 32.6261 8.76C32.5061 8.24 32.3141 7.852 32.0501 7.596C31.7941 7.332 31.4501 7.2 31.0181 7.2C30.5861 7.2 30.2381 7.332 29.9741 7.596C29.7181 7.852 29.5301 8.24 29.4101 8.76C29.2981 9.272 29.2421 9.92 29.2421 10.704Z' fill='white'/%3E%3C/svg%3E%0A");
+    display: grid;    
+    width: 41px;    
+    height: 40px;
     grid-area: cart;
+    background-repeat: no-repeat;
+    
+}
+
+.cart-span{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    position: absolute;
+    width: 45px;
+    height: 14px;
+    left: calc(50% - 45px/2 - 0.23px);
+    top: 40px;
     
 }
 
@@ -266,6 +302,7 @@ input{
     top: 34px;
     position: absolute;
 }
+
 .top-bar{
     position: absolute;
     width: 1920px;
@@ -329,5 +366,197 @@ input{
     gap: 8px;
     margin-right: 736px;
 }
+
+.sub-menu{
+    position: absolute;
+    width: 780px;
+    height: 26px;
+    left: 600px;
+    top: 100px;
+    padding: 0px;
+    gap: 2px;
+
+}
+.sub-menu > li{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    
+    
+}
+
+.sub-menu > li:nth-child(1){
+    width: 91px;
+    height: 26px;
+}
+
+.sub-menu > li:nth-child(2){
+
+    
+    width: 102px;
+    height: 26px;
+}
+.sub-menu > li:nth-child(3){
+
+    
+    width: 108px;
+    height: 26px;
+}
+.sub-menu > li:nth-child(4){
+    width: 73px;
+    height: 26px;
+
+}
+.sub-menu > li:nth-child(5){
+    width: 73px;
+    height: 26px;
+}
+
+.sub-menu > li:nth-child(6){
+    width: 73px;
+    height: 26px;
+}
+
+.sub-menu > li:nth-child(7){
+    width: 73px;
+    height: 26px;
+}
+
+.sub-menu > li:nth-child(8){
+    width: 73px;
+    height: 26px;
+}
+
+.sub-menu > li:nth-child(9){
+    
+    width: 73px;
+    height: 26px;
+}
+
+.btn-span{
+    position: absolute;
+    left: 29.55%;
+    right: 29.55%;
+    top: 62.07%;
+    bottom: 25.86%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: var( --color-white);
+    
+}
+
+
+.arrow_box {
+    display: none;
+
+}
+
+.cart--empty  .arrow_box{
+    display: block;
+    position: relative;
+	border: 1px solid var(--color-gray-600);
+    width: 250px;
+    height: 100px;
+    font-size: 12px;   
+    z-index: 5;
+    left: -240px;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 100px;
+    top:10px;
+}
+
+
+
+/* 꼭지점만 사라지고 나오는상황 */
+/* 꼭지점 */
+.cart--empty .arrow_box:after, .cart--empty .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.cart--empty  .arrow_box:after {
+    border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 10px;
+	margin-left: 90px;
+}
+.cart--empty .arrow_box:before {
+	border-color: rgba(79, 255, 179, 0);
+	 border-bottom-color:  1px solid var(--color-gray-600); 
+	border-width: 11px;
+	margin-left: 90px;
+}
+
+
+
+
+.li {
+    display: none;
+
+}
+
+.is--active  .myCoupang-ul{
+    display: block;
+    position: relative;
+	border: 1px solid var(--color-gray-600);
+    font-size: 12px;   
+    z-index: 5;
+    top:10px;
+    width: 90px;
+    height: 100px;
+    
+    line-height: 30px;
+    padding: 0 5px;
+    
+}
+
+.is--active  .li{
+    display: block;
+    text-align: center;
+    
+}
+
+.li-a{
+    text-align: center;
+}
+
+
+/* 꼭지점만 사라지고 나오는상황 */
+/* 꼭지점 */
+.is--active .myCoupang-ul:after, .is--active .myCoupang-ul:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.is--active  .myCoupang-ul:after {
+    border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 5px;
+	margin-left: -5px;
+}
+
+.is--active .myCoupang-ul:before {
+    border-color: rgba(79, 255, 179, 0);
+	border-bottom-color: 1px solid var(--color-gray-600);
+	border-width: 5px;
+	margin-left: -5px;
+}
+
+
 
 
