@@ -26,7 +26,7 @@
             <h1 class="sr-only">Coupang</h1>
             <div class="header__inner">
                 <!-- 카테고리 버튼은 .header__inner 영역 안에 마크업 해주세요. -->
-                <button class="button--category">
+                <button class="button--category" tabindex="0">
                     <span class="btn-span">
                         <svg
                             width="30"
@@ -52,35 +52,47 @@
             <div class="navigation__inner">
                 <!-- 카테고리별 내비게이션(메뉴) 영역 -->
                 <ul class="navigation__list level1">
-                    <li>
-                        <a href="/" role="button">
+                    <li class="firstchild">
+                        <a href="/" role="button" class="first-a">
                             <i class="icon-clothes"></i>
                             패션의류/잡화
                         </a>
-                        <ul class="navigation__list level2" >
-                            <li>
+                        <ul class="navigation__list level2">
+                            <li class="secoundchild">
                                 <a href="/" role="button">
                                     여성패션
                                 </a>
                                 <ul class="navigation__lis level3">
-                                    <li>
-                                        의류
+                                    <li class="threechild">
+                                        <a href="/">
+                                            의류
+                                        </a>
                                     </li>
-                                    <li>
-                                        속옷/잠옷
+                                    <li class="threechild">
+                                        <a href="/">
+                                            속옷/잠옷
+                                        </a>
                                     </li>
-                                    <li>
-                                        신발
+                                    <li class="threechild">
+                                        <a href="/">
+                                            신발
+                                        </a>
                                     </li>
                                 </ul>
-                                <li>
-                                  남성패션
-                              </li>
-                              <li>유아동패션</li>
-                            </li>                                
+                            <li class="secoundchild">
+                                <a href="/">
+                                    남성패션
+                                </a>
+                            </li>
+                            <li class="secoundchild">
+                                <a href="/">
+                                    유아동패션
+                                </a>
+                            </li>
+                        </li>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-beauty"></i>
                         뷰티
@@ -92,7 +104,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <!-- a 태그 없으면 구현되지 않는다. -->
                     <a>
                         <i class="icon-baby"></i>
@@ -105,7 +117,8 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
+
                     <a>
                         <i class="icon-foods"></i>
                         식품
@@ -117,7 +130,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-kitchenware"></i>
                         주방용품
@@ -129,7 +142,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-houseware"></i>
                         생활용품
@@ -141,7 +154,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-interior"></i>
                         홈인테리어
@@ -153,7 +166,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-appliances"></i>
                         가전디지털
@@ -165,7 +178,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-sports"></i>
                         스포츠
@@ -178,7 +191,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-car"></i>
                         자동차용품
@@ -190,7 +203,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-book"></i>
                         도서음반
@@ -202,7 +215,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-stationery"></i>
                         문구오피스
@@ -214,7 +227,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-pet"></i>
                         반려동물
@@ -226,7 +239,7 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-travel"></i>
                         여행티켓
@@ -238,10 +251,14 @@
                         <ul class="navigation__list"></ul>
                     </ul>
                 </li>
-                <li>
+                <li class="firstchild">
                     <a>
                         <i class="icon-theme"></i>
                         테마관
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.53009 6H3.99409L1.50609 1.68H1.47409C1.47943 1.81333 1.48476 1.94933 1.49009 2.088C1.49543 2.22133 1.50076 2.35733 1.50609 2.496C1.51676 2.62933 1.52476 2.76533 1.53009 2.904C1.53543 3.03733 1.54076 3.17333 1.54609 3.312V6H0.466094V0.288H1.99409L4.47409 4.568H4.49809C4.49276 4.43467 4.48743 4.304 4.48209 4.176C4.47676 4.04267 4.47143 3.912 4.46609 3.784C4.46609 3.65067 4.46343 3.52 4.45809 3.392C4.45276 3.25867 4.44743 3.12533 4.44209 2.992V0.288H5.53009V6Z" fill="white"/>
+                            </svg>
+                                                      
                     </a>
                     <ul class="navigation__list">
                         <li>
@@ -261,38 +278,38 @@
     <footer class="footer">
         <!-- 푸터 영역 -->
         <!-- 푸터 관련 콘텐츠는 .footer 영역 안에 마크업 해주세요. -->
-        <div>
+        <div class="footer-layer1">
             <span>인재채용</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>입점 / 제휴문의</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>공지사항</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>고객의 소리</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>
                 <b>개인정보 처리방침</b>
             </span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>쿠팡페이 이용약관</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>
                 <b>쿠팡페이 개인정보 처리방침</b>
             </span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>신뢰관리센터</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>제휴마케팅</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
             <span>광고안내</span>
-            <span class="”divider”">ㅣ</span>
+            <span class="divider" aria-hidden="true">ㅣ</span>
         </div>
-        <div>
-            <h1>
-                Coupang
+        <div class="footer-layer2">
+            <h1 class="footer-h1">                         
+                <span class="h1-hidden">Coupang</span>
             </h1>
-            <div>
-                <address>
+            <div class="footer-cotent">
+                <address class="address">
                     상호 명 및 호스팅 서비스 제공 : 쿠팡(주)
                     <br>
                     대표이사 : 강한승,박대준
@@ -306,14 +323,14 @@
                 <div>
                     <a>
                         <strong>365고객센터</strong>
-                        | 전자금융거래분쟁처리담당
+                         전자금융거래분쟁처리담당
                         <br>
-                        <em>1577-7011</em>
+                        <a href="tel:1577-7011">1577-7011</a>
                         서울 송파구 송파대로 570
-                        <span>email : help@coupang.com</span>
+                        <span><a href="mailto: help@coupang.com?subject=문의사항">email : help@coupang.com</a></span>
                     </a>
                 </div>
-                <p>
+                <p class="p-content">
                     <strong>우리은행 채무지급보증 안내</strong>
                     <br>
                     <span>
@@ -326,7 +343,7 @@
                 </p>
             </div>
             <!-- 검은색 바탕부분 footer-->
-            <div>
+            <div class="footer-layer3">
                 <div>
                     <p>
                         사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
@@ -447,7 +464,6 @@
                                 </svg>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
