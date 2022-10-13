@@ -2,7 +2,7 @@
 /* 헤더                                            */
 /* ---------------------------------------------- */
 *:focus {
-  outline: 0;
+  outline: none;
 }
 .button--category{
   width: 110px;
@@ -53,6 +53,7 @@ li{
   outline: 0;
   border: 0;
   border-radius: 0.35rem;
+  border: 1px solid red;
 }
 
 .button--category:focus.is--active{
@@ -82,11 +83,10 @@ li{
 
 .level2{
   position: absolute;
-  width: 180px;
+  width: 170px;
   height: 500px;
   left: 180px;
   top: -11px;
-
   /* Shadow / 100 */
   
   background-color: #fff;
@@ -107,7 +107,7 @@ li{
 }
 
 h2{
-  display: block;
+    display: block;
     text-indent: -9em;
     width: 0;
     height: 0;
@@ -155,12 +155,11 @@ h2{
 }
 .level2 .is--active > a{
   display: inline-block;
-
 }
 
 
 .navigation__inner .navigation__list li >a{
-  font-size: 15px;
+  font-size: 12px;
   width: 170px;
   height: 30px;
   font-weight: 400;
@@ -195,6 +194,7 @@ h2{
   position: absolute;
   height: 30px;
   gap: 4px;
+  width: 170px;
 } 
 
 .navigation > a{
@@ -391,10 +391,21 @@ h2{
 
 
 /* 구분선 */
-.level2 .is--active::before{
+.is--active.level2::before{
   content: "";
-  border-left: 2px solid var(--color-gray-700);
-  display: inline-block;
+  position: absolute;
+  height: 500px;
+  left: 0px;
+  border-left: 1px solid var(--color-gray-200);
+}
+
+
+.is--active.level3::before{
+  content: "";
+  position: absolute;
+  height: 500px;
+  left: 0px;
+  border-left: 1px solid var(--color-gray-200);
 }
 
 
@@ -408,9 +419,11 @@ h2{
   color: var(--color-blue-600);
   background-repeat: no-repeat;
   background-position: right;
+  display: inline-block;
 }
 
-.navigation__inner .level1.is--active a:focus{
+
+.level1 .firstchild > a:focus {
   background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 0.5L0.5 9.5L6.5 4.80435L0.5 0.5Z' fill='%230074E9'/%3E%3C/svg%3E%0A");
   color: var(--color-blue-600);
   border: 1px solid var(--color-blue-600);
@@ -420,7 +433,7 @@ h2{
 }
 
 
-.level1 .is--active a:focus{
+.level1 .secoundchild > a:focus {
   background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 0.5L0.5 9.5L6.5 4.80435L0.5 0.5Z' fill='%230074E9'/%3E%3C/svg%3E%0A");
   color: var(--color-blue-600);
   border: 1px solid var(--color-blue-600);
@@ -428,6 +441,16 @@ h2{
   background-repeat: no-repeat;
   background-position: right;
 }
+
+
+.level1 .is--active  a:focus{
+  color: var(--color-blue-600);
+  border: 1px solid var(--color-blue-600);
+  display: inline-block;
+  
+}
+
+
 
 .level3 a:focus{
   text-decoration: underline;
@@ -439,7 +462,6 @@ h2{
   text-decoration: underline;
   color: var(--color-blue-600);
 }
-
 
 
 /* icon font */
@@ -548,8 +570,9 @@ i {
   background-repeat: no-repeat;
   width: 176px;
   height: 40px;
-  left: 0px;
+  left: -37px;
   top: 0px;
+  position: relative;
 
 }
 
@@ -588,7 +611,6 @@ i {
   height: 207px;
   left: 0px;
   top: 40px;
-  border: 1px solid blue;
   background-color: var(--color-white);
   display: flex;
   justify-content: center;
@@ -596,23 +618,33 @@ i {
   font-size: 16px;
   line-height: 120%;
   color: var(--color-gray-800);
+  align-items: center;
   
 }
 
 .footer-cotent{
   display: flex;
-  border: 1px solid red;
-  align-items: center;
+  justify-content: space-evenly;
+    width: 1200px;
+  height: 143px;
+  left: 360px;
+  top: 32px;
+
 }
 
 .footer-layer3{
-  border: 1px solid yellowgreen;
   position: absolute;
   height: 102px;
   left: 0px;
   right: 0px;
-  top: 247px;
+  top: 206px;
   background-color: var(--color-gray-900);
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 120%;
+  color: var(--color-gray-200);
 }
 
 .address{
@@ -620,6 +652,7 @@ i {
   height: 143px;
   left: 239px;
   top: 0px;
+ 
 }
 
 .p-content{
@@ -627,4 +660,70 @@ i {
   height: 84px;
   left: 916px;
   top: 0px;
+}
+
+.tel-email{
+  width: 293px;
+  height: 143px;
+  left: 561px;
+  top: 0px;
+}
+
+.footer-layer3-div{
+  
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-layer3-ul{
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.instagram > a > svg{
+
+  width: 34px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%),rgba(0,255,0,0);
+  border-radius: 100px;
+}
+
+.digital{
+  border-left: 1px solid var(--color-gray-800);
+  padding: 0 3px;
+}
+
+.tel{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  display: block;
+}
+
+.email{
+  display: block;
+}
+
+.address > span{
+  display: inline-block;
+  padding: 0 0 12px;
+}
+
+
+.tel-email > a {
+  display: inline-block;
+  padding: 0 0 12px;
+}
+
+.tel-email > span {
+  display: inline-block;
+  padding: 0 0 12px;
+}
+
+.strong{
+  display: inline-block;
+  padding: 0 0 12px;
 }
