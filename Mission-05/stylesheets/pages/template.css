@@ -681,8 +681,7 @@ i {
 
 }
 
-.instagram > a > svg{
-
+.instagram > a > img{
   width: 34px;
   height: 34px;
   left: 0px;
@@ -693,6 +692,7 @@ i {
 
 .digital{
   border-left: 1px solid var(--color-gray-800);
+  position: absolute;
   padding: 0 3px;
 }
 
@@ -701,6 +701,7 @@ i {
   font-size: 48px;
   line-height: 120%;
   display: block;
+  padding: 0 0 12px;
 }
 
 .email{
@@ -713,16 +714,23 @@ i {
 }
 
 
-.tel-email > a {
+.tel-email > div {
   display: inline-block;
   padding: 0 0 12px;
 }
 
-.tel-email > span {
+.tel-detail  {
   display: inline-block;
   padding: 0 0 12px;
 }
-
+.tel {
+  display: inline-block;
+  padding: 0 0 12px;
+}
+.adr{
+  display: inline-block;
+  padding: 0 0 12px;
+}
 .strong{
   display: inline-block;
   padding: 0 0 12px;
